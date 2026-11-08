@@ -1,0 +1,6 @@
+pnpm-lock.yaml
+.next
+src/data/generated
+public/vendor
+test-results
+playwright-report

@@ -1,0 +1,46 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "data": "tsx scripts/build-data.ts && tsx scripts/copy-maplibre-worker.ts",
+    "predev": "pnpm data",
+    "dev": "next dev",
+    "prebuild": "pnpm data",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "pretest": "pnpm data",
+    "test": "vitest run",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@turf/circle": "^7.4.0",
+    "lucide-react": "^1.70.0",
+    "maplibre-gl": "^6.17.0",
+    "next": "16.4.5",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-map-gl": "^8.1.3",
+    "sonner": "^2.0.8",
+    "zustand": "^5.1.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/papaparse": "^5.5.2",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.5",
+    "papaparse": "^5.7.0",
+    "prettier": "^3.9.10",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.15",
+    "typescript": "^5",
+    "vitest": "^5.1.0"
+  },
+  "packageManager": "pnpm@10.8.1"
+}
