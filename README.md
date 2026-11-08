@@ -16,7 +16,7 @@ pnpm dev                     # http://localhost:3000
 
 `predev` / `prebuild` / `pretest` run `pnpm data`, which:
 
-1. `scripts/build-data.ts` — parses `../data/*.csv` → `src/data/generated/{schools,retailers}.json`
+1. `scripts/build-data.ts` — parses `data/*.csv` → `src/data/generated/{schools,retailers}.json`
    (ranking, tier mapping, nearby-retailer distances).
 2. `scripts/copy-maplibre-worker.ts` — copies MapLibre's worker to `public/vendor/`.
 

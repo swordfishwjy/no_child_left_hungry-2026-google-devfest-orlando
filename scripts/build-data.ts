@@ -20,7 +20,9 @@ import type {
   School,
 } from "../src/lib/types";
 
-const DATA_DIR = path.resolve(process.cwd(), "..", "data");
+// Source CSVs live inside the repo (web/data) so CI/Vercel builds can read them.
+// Override with DATA_DIR=/abs/path when experimenting with other extracts.
+const DATA_DIR = path.resolve(process.env.DATA_DIR ?? path.join(process.cwd(), "data"));
 const OUT_DIR = path.resolve(process.cwd(), "src", "data", "generated");
 const SCHOOLS_CSV =
   "SchoolFood_Connect_OCPS_All7Flags_Top5.xlsx - All Schools.csv";
