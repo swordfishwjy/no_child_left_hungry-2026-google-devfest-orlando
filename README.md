@@ -4,8 +4,6 @@ Map-first demo that ranks the 139 OCPS elementary schools by total food-insecuri
 risk flags (0–7) and lets food banks drill from the Top 5 down to the SNAP retailers
 around each school.
 
-Design: `../docs/tech_design_plan.md` · Stitch screens: `../stitch_no_child_left_hungry_portal/`
-
 ## Run locally
 
 ```bash
@@ -64,7 +62,3 @@ handled per move (`cameraForBounds` padding, `flyTo` offset).
   chunk → served from `/vendor` and set with `setWorkerUrl()` in `MapCanvas`.
 - **Tailwind v4 drops unused theme vars.** Tokens are referenced via `var(--color-rank-N)`
   in inline styles, so the theme is declared with `@theme static`.
-- **Ranking:** total flags desc, ties by the CSV `priority_rank`. Schools with a missing
-  flag rank by known flags and show "Unknown".
-- `prepared_meals` tier exists in the type/STORE_TIER map but has 0 Orange County rows,
-  so it is hidden from legends.
